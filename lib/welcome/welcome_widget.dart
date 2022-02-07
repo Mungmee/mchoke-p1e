@@ -19,39 +19,65 @@ class _WelcomeWidgetState extends State<WelcomeWidget>
       duration: 1000,
       delay: 1000,
       fadeIn: true,
-      initialState: AnimationState(),
-      finalState: AnimationState(),
+      initialState: AnimationState(
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        opacity: 1,
+      ),
     ),
     'columnOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 100,
       fadeIn: true,
-      initialState: AnimationState(),
-      finalState: AnimationState(),
+      initialState: AnimationState(
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        opacity: 1,
+      ),
     ),
     'imageOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 1100,
       fadeIn: true,
-      initialState: AnimationState(),
-      finalState: AnimationState(),
+      initialState: AnimationState(
+        scale: 0.4,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        scale: 1,
+        opacity: 1,
+      ),
     ),
     'textOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 1100,
       fadeIn: true,
-      initialState: AnimationState(),
-      finalState: AnimationState(),
+      initialState: AnimationState(
+        offset: Offset(0, 70),
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        opacity: 1,
+      ),
     ),
     'textOnPageLoadAnimation2': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 1100,
       fadeIn: true,
-      initialState: AnimationState(),
-      finalState: AnimationState(),
+      initialState: AnimationState(
+        offset: Offset(0, 100),
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        opacity: 1,
+      ),
     ),
   };
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -95,7 +121,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget>
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
               child: Text(
-                'Welcome to Flutterflow',
+                'Welcome to มั่งมี โชคลาภ',
                 style: FlutterFlowTheme.title1.override(
                   fontFamily: 'Lexend Deca',
                   color: Colors.white,
@@ -107,7 +133,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget>
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 120),
               child: Text(
-                'Build Apps Effortlessly',
+                'แนวทางที่น่าติดตามมากที่สุด..',
                 style: FlutterFlowTheme.title3.override(
                   fontFamily: 'Lexend Deca',
                   color: Colors.white,

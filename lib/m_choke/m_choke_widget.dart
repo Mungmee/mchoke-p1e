@@ -18,6 +18,27 @@ class _MChokeWidgetState extends State<MChokeWidget> {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: Color(0xFFF5F5F5),
+      body: SafeArea(
+        child: GestureDetector(
+          onTap: () => FocusScope.of(context).unfocus(),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Image.network(
+                    'https://picsum.photos/seed/865/600',
+                    width: 500,
+                    height: 500,
+                    fit: BoxFit.cover,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
